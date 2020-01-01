@@ -7,3 +7,4 @@ catkin_ws/install/
 *.elf
 *.hex
 *.pyc
+*.DS_Store

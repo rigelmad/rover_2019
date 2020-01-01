@@ -1,5 +1,7 @@
 # Rover 2019
 
+![](media/numrt.png)
+
 ## Background
 
 This package houses code for Northeastern University Mars Rover Team for the 2019 [Mars Society University Rover Challenge](http://urc.marssociety.org/). This folder has been tailored to respect IP of Northeastern University Mars Rover Team. Only packages written by me are included here, more information regarding this project available upon request.
@@ -12,7 +14,7 @@ The University Rover Challenge challenges students to design, build, and test a 
 3. **Life Detection** - Sample the environment and run onboard tests to confirm/deny existence of life
 4. **Autonomous Traversal** - Autonomously navigate a course, avoiding obstacles and move towards a discernible goal (tennis ball, AR tag, etc.)
 
-## Northeastern University Mars Rover Team
+## [Northeastern University Mars Rover Team](https://www.northeasternrover.com/)
 
 Our 2019 Rover, Watney Mk. 1 (pictured below), was our response to this challenge. Featuring a rocker bogey suspension system, 5-DOF robotic arm, attachable life detection payload, and all custom boards, we were selected to be one of 36 teams to be selected to compete from the original 84 applicant pool. Furthermore, we were the _only_ first time applicant to be accepted.
 
