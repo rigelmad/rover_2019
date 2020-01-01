@@ -20,9 +20,9 @@ Our 2019 Rover, Watney Mk. 1 (pictured below), was our response to this challeng
 
 ### Electrical/Software System Design
 Watney Mk. 1 featured entirely custom parts; a custom chassis, suspension and arm were fabricated, with custom electronics and custom code driving it all. The Rover was divided into three main subsystems:
-1. **Drive** - The hardware/software used to take user controller and current sense input and drive the DC motors powering the 6 wheels on the rover.
-2. **Arm** - The hardware/software used to take user controller input and drive the DC motors on the 5-DOF robotic arm.
-3. **Life Detection** - The hardware/software used to take user controller input and drive an array of solenoids, motors, pumps, and cameras in order to inject a soil slurry into our system, and view the results of several scientific assays.
+1. **[Drive](catkin_ws/src/drive_control)** - The hardware/software used to take user controller and current sense input and drive the DC motors powering the 6 wheels on the rover.
+2. **[Arm](catkin_ws/src/arm_joy_control)** - The hardware/software used to take user controller input and drive the DC motors on the 5-DOF robotic arm.
+3. **[Life Detection](catkin_ws/src/life_detection)** - The hardware/software used to take user controller input and drive an array of solenoids, motors, pumps, and cameras in order to inject a soil slurry into our system, and view the results of several scientific assays.
 
 #### Board Architecture
 Each board featured multiple ATmega328P microcontrollers on board. The number of micros on each board differed depending on the board's function, but every board had one _Master_ ATMega that leveraged UART communication to send and receive data to/from ROScore. The Master ATMega and all other Slave ATMega micros were connected via I2C.
@@ -30,4 +30,4 @@ Each board featured multiple ATmega328P microcontrollers on board. The number of
 Each one of these subsystems was dedicated its own ATmega328P-based board, and in order to bring all of these subsystems together, we leveraged the ROS framework to handle all information distribution. An NVIDIA Jetson TX2 hosted ROScore.
 
 #### Software Architecture
-Rosserial_Arduino was used to seamlessly integrate our custom boards into the ROS environment. Given our tight development schedule, we used the Arduino software library for rapid firmware prototyping. In addition to the firmware packages, an additional safety circuit (or watchdog **ADD LINK HERE**) was created, autonomously ensuring that the rover was not allowed to put itself into dangerous situations.
+[rosserial_arduino](http://wiki.ros.org/rosserial_arduino) was used to seamlessly integrate our custom boards into the ROS environment. Given our tight development schedule, we used the Arduino software library for rapid firmware prototyping. In addition to the firmware packages, an additional safety circuit (or [watchdog](catkin_ws/src/watchdog) was created, autonomously ensuring that the rover was not allowed to put itself into dangerous situations.
