@@ -1,0 +1,9 @@
+Max11604	KEYWORD1
+
+readAllChannels	KEYWORD2
+readSingleChannel	KEYWORD2
+begin	KEYWORD2
+
+
+
+

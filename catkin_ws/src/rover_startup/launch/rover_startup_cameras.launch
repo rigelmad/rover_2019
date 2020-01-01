@@ -1,0 +1,8 @@
+<launch>
+
+  <rosparam> target0: "/dev/v4l/by-id/usb-Teslong_Camera_Teslong_Camera-video-index0" </rosparam>
+  <rosparam> target1: "/dev/v4l/by-id/usb-HD_Camera_Manufacturer_USB_2.0_Camera-video-index0" </rosparam>
+
+  <include file="$(find video_stream)/launch/two_camera_stream.launch" />
+
+</launch>

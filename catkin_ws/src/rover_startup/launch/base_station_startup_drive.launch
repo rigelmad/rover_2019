@@ -1,0 +1,12 @@
+<launch>
+
+    <!-- Launch the pinger -->
+    <include file="$(find pinger)/launch/pinger.launch" />
+
+    <!-- Launch the base station controller -->
+   <!--  <include file="$(find base_station)/launch/base_station.launch" /> -->
+
+    <!-- Launch the drive command generator node -->
+    <include file="$(find drive_control)/launch/drive.launch" />
+
+</launch>

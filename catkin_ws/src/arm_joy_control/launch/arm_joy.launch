@@ -1,0 +1,16 @@
+<launch>
+
+  <node name="joy_node_arm" pkg="joy" type="joy_node" respawn="true">
+    <!-- Sets the dev parameter within the joy_node/ namespace -->
+    <!-- This is part of setting up joy_node to work with the real controller -->
+    <!-- See joy tutorial: http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick -->
+    <remap from="joy" to="/arm/joy"/>
+    <rosparam>
+      dev: "/dev/input/js1"
+    </rosparam>
+  </node>
+
+  <node name="arm_subsys" pkg="arm_joy_control" type="arm_subsys" respawn="true" output="screen" />
+
+
+</launch>

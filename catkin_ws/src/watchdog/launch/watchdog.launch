@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="watchdog" pkg="watchdog" type="watchdog" respawn="true" output="screen" />
+
+</launch>

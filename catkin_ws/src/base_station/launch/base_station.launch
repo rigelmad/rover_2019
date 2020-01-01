@@ -1,0 +1,10 @@
+<launch>
+
+  <node name="base_station" pkg="base_station" type="bs_subsys" respawn="true" output="screen" />
+
+  <node name="base_serial"        pkg="rosserial_python"      type="serial_node.py" output="screen">
+    <param name="port"              type="string"               value="/dev/ttyUSB0"/>
+    <param name="baud"              type="int"                  value="57600"/>
+  </node>
+
+</launch>

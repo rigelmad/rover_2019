@@ -1,0 +1,16 @@
+<launch>
+  <node name="adc_plot"
+        pkg="rqt_plot"
+        type="rqt_plot"
+        args="/power_board_sensors/adc1 /power_board_sensors/adc2 /power_board_sensors/adc3 /power_board_sensors/adc4" />
+
+  <node name="orientation_plot"
+        pkg="rqt_plot"
+        type="rqt_plot"
+        args="/power_board_sensors/orientX /power_board_sensors/orientY /power_board_sensors/orientZ" />
+
+  <node name="ultrasonic_plot"
+        pkg="rqt_plot"
+        type="rqt_plot"
+        args="/power_board_sensors/ultrasonic1 /power_board_sensors/ultrasonic2 /power_board_sensors/ultrasonic3 /power_board_sensors/ultrasonic4" />
+</launch>

@@ -1,0 +1,18 @@
+<launch>
+
+  <!-- Launch basic drive stuff -->
+  <arg name="power" default="0" doc="/dev/ttyUSBx for power" />
+  <arg name="drive" default="1" doc="/dev/ttyUSBx for drive" />
+  <arg name="ld" default="3" doc="/dev/ttyUSBx for ld" />
+
+  <include file="$(find rover_startup)/launch/rover_startup_drive.launch">
+    <arg name="power" value="$(arg power)" />
+    <arg name="drive" value="$(arg drive)" />
+  </include>
+
+  <node name="ld_serial"        pkg="rosserial_python"      type="serial_node.py" output="screen">
+    <param name="port"              type="string"               value="/dev/ttyUSB$(arg ld)"/>
+    <param name="baud"              type="int"                  value="57600"/>
+  </node>
+
+</launch>

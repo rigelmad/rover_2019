@@ -1,0 +1,1 @@
+This file is just here to force git to pick up this empty folder for now. We can delete it once actual stuff gets put in here. Not really sure what it's for atm.

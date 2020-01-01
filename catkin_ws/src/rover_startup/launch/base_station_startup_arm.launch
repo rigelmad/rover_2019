@@ -1,0 +1,9 @@
+<launch>
+
+    <!-- Launch the basic startup launchfile -->
+    <include file="$(find rover_startup)/launch/base_station_startup_drive.launch" />
+
+    <!-- Launch the arm command generator node -->
+    <include file="$(find arm_joy_control)/launch/arm_joy.launch" />
+
+</launch>

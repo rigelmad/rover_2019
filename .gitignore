@@ -1,0 +1,9 @@
+catkin_ws/devel/
+catkin_ws/build/
+catkin_ws/logs/
+catkin_ws/install/
+.catkin_tools
+.catkin_workspace
+*.elf
+*.hex
+*.pyc
